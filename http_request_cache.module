@@ -11,11 +11,14 @@
  */
 function http_request_cache_http_request($url, array $options = array()) {
 
+  // Create a cache key that is unique to this request. We hash it to prevent
+  // any potentially sensitive information from being stored in the database.
   $args = func_get_args();
   $key = __FUNCTION__ . serialize($args);
   $cid = hash('sha512', drupal_get_hash_salt() . $key);
 
   // Skip POST requests no matter what.
+  // All other requests get cached by default.
   $is_cacheable = empty($options['method']) || drupal_strtoupper($options['method']) != 'POST';
 
   // Allow modules to adjust cacheable status.
@@ -70,7 +73,10 @@ function http_request_cache_http_request($url, array $options = array()) {
  */
 function http_request_cache_init() {
 
-  // Use our custom function only after the module is loaded.
+  // Use our custom function only after the module is loaded. If this gets
+  // defined by variable_set(), drush, or in settings.php it will cause the
+  // site to break because the module hasn't been loaded before the function
+  // is used.
   global $conf;
   $conf['drupal_http_request_function'] = 'http_request_cache_http_request';
 }
