@@ -1,1 +1,3 @@
 name = HTTP Request Cache
+description = Cache outgoing HTTP requests.
+core = 7.x
