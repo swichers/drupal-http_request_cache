@@ -6,6 +6,10 @@ Provides a wrapper around drupal_http_request() that will, by default, cache out
 
 No additional requirements.
 
+## Installation
+
+Install as usual, see [this guide][2] for further information.
+
 ## Usage
 
 Just enable the module and it will start caching outgoing GET requests. More complex rules require implementing an alter hook.
@@ -34,3 +38,4 @@ function MYMODULE_http_request_is_cacheable_alter(&$is_cacheable, $context) {
 > [http://www.mcmurrytmg.com][1] for more information.
 
 [1]: http://www.mcmurrytmg.com
+[2]: http://drupal.org/documentation/install/modules-themes/modules-7
