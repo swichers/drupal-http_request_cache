@@ -14,6 +14,8 @@ Install as usual, see [this guide][2] for further information.
 
 Just enable the module and it will start caching outgoing GET requests. More complex rules require implementing an alter hook.
 
+Some basic configuration options are available under admin/config/system/request-cache.
+
 ### hook usage
 
 ```
