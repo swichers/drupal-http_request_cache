@@ -69,9 +69,9 @@ function http_request_cache_http_request($url, array $options = array()) {
 }
 
 /**
- * Implements hook_init().
+ * Implements hook_boot().
  */
-function http_request_cache_init() {
+function http_request_cache_boot() {
 
   // Use our custom function only after the module is loaded. If this gets
   // defined by variable_set(), drush, or in settings.php it will cause the
