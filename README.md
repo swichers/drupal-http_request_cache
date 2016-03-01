@@ -8,7 +8,7 @@ No additional requirements.
 
 ## Installation
 
-Install as usual, see [this guide][2] for further information.
+Install as usual, see [this guide][1] for further information.
 
 ## Usage
 
@@ -29,15 +29,4 @@ function MYMODULE_http_request_is_cacheable_alter(&$is_cacheable, $context) {
 }
 ```
 
-## This project has been sponsored by:
-
-**McMurry/TMG**
-
-> McMurry/TMG is a world-leading, results-focused content marketing
-> firm. We leverage the power of world-class content — in the form of
-> the broad categories of video, websites, print and mobile — to keep
-> our clients’ brands top of mind with their customers.  Visit
-> [http://www.mcmurrytmg.com][1] for more information.
-
-[1]: http://www.mcmurrytmg.com
-[2]: http://drupal.org/documentation/install/modules-themes/modules-7
+[1]: http://drupal.org/documentation/install/modules-themes/modules-7
